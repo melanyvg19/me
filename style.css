@@ -28,6 +28,7 @@ body {
     width: 100%;
     display: block;
     height: 400px;
+    object-fit: cover;
 }
 .fondo h1{
     position: absolute;
@@ -49,6 +50,7 @@ body {
 .horizontal-container p{
     color: #ffffff;
     text-align: center;
+    letter-spacing: 1px;
 }
 .horizontal-container h2{
     color: #ffffff;
@@ -70,7 +72,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    background-color: #1a1d20;
+    background-color: #0f0f0f;
 }
 
 .card {
@@ -86,6 +88,9 @@ body {
     width: 40%;
     object-fit: cover;
 }
+.card a{
+    color: #e0d9d9;
+}
 
 .card-content {
     padding: 20px;
@@ -93,7 +98,7 @@ body {
 }
 
 .card-content h3 {
-    color: #ffffff;
+    color: #a59d9d;
     text-align: center;
 }
 
@@ -127,7 +132,7 @@ body {
     height: 400px;
 }
 .footer {
-    background-color: #333;
+    background-color: #0f0f0f;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -140,7 +145,7 @@ body {
 }
 
 .footer-section h3 {
-    color: #55527e;
+    color: #7b789e;
     margin: auto;
 }
 
