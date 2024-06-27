@@ -12,7 +12,7 @@
     <a href="#about">Sobre mí</a>
     <a href="#proyecto">Proyectos</a>
     <a href="#tecno">Tecnologias</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#contacto">Contáctame</a>
     
 </div>
 <div class="fondo">
@@ -73,12 +73,15 @@
     </div>
 </div>
 
-
-
-<div class="tecnologias" id="tecno">
-
-
-</div>
+    <div class="image-container" id="tecno">
+        <img src="assets/img/java.jpg" alt="java">
+        <img src="assets/img/js.png" alt="js">
+        <img src="assets/img/react.jpg" alt="react">
+        <img src="assets/img/postgre.png" alt="postgre">
+        <img src="assets/img/sql.jpg" alt="sql">
+        <img src="assets/img/py.png" alt="python">
+        <img src="assets/img/rocketbot.jpg" alt="rocketbot">
+    </div>
 
 <footer class="footer">
     <div class="footer-content">
@@ -99,6 +102,19 @@
         &copy; 2024 Empresa. Todos los derechos reservados.
     </div>
 </footer>
+<script>
+     const images = document.querySelectorAll('.image-container img');
 
+function showImages() {
+    images.forEach((img, index) => {
+        setTimeout(() => {
+            img.classList.add('visible');
+        }, index * 500);
+    });
+}
+images.forEach(img => {
+    img.addEventListener('mouseover', showImages);
+});
+</script>
 </body>
 </html>
