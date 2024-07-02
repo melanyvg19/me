@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ensayo.css">
     <title>Presentación</title>
     <meta name="description" content="Sitio web de Melany Valle, la mejor desarrolladora web, con +1 año de experiencia en el mundo tech, con manejo de herramientas como: React, JavaScript, Java y Python">
     
@@ -13,9 +13,25 @@
     <a href="#about">Sobre mí</a>
     <a href="#proyecto">Proyectos</a>
     <a href="#tecno">Tecnologias</a>
-    <a href="#contacto">Contáctame</a>
+    <a href="#contacto" id="contactButton">Contáctame</a>
     
 </div>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <label for="name">Nombre: </label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
 <div class="fondo">
     <img src="assets/img/pngtree-computerized-seo-background-exploring-web-development-programming-code-and-app-development-image_13515246.webp" alt="fondo">
     <h1>Melany Valle Gutierrez</h1>
@@ -116,6 +132,26 @@ function showImages() {
 }
 images.forEach(img => {
     img.addEventListener('mouseover', showImages);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("contactModal");
+    const btn = document.getElementById("contactButton");
+    const span = document.getElementsByClassName("close-button")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
 </script>
 </body>
