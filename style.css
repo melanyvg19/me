@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: black;
@@ -112,6 +115,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     padding: 20px;
     height: 400px;
 }
@@ -125,7 +129,7 @@ body {
     width: 150px;
 }
 .logo {
-    width: 130px;  
+    width: 120px;  
     height: 130px; 
 }
 .fondo{
@@ -168,7 +172,7 @@ body {
 }
 
 .footer-bottom {
-    background-color: #222;
+    background-color: #000000;
     padding: 10px 0;
 }
 .image-container {
@@ -190,4 +194,68 @@ body {
 .image-container img.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        width: 100%;
+        
+    }
+    .fondo h1 {
+        font-size: 2.5rem;
+        left: 5%;
+    }
+    .horizontal-container {
+        flex-direction: column;
+        margin: 2rem 1rem;
+    }
+    .about {
+        width: 100%;
+    }
+    .card {
+        flex-direction: column;
+        margin: 2rem 1rem;
+        max-width: 100%;
+    }
+    .card-img {
+        width: 100%;
+    }
+    .card-content{
+       width: 90%;
+    }
+}
+@media  (max-width: 430px) {
+    .container-skills {
+        justify-content: center;
+    }
+    .navbar a {
+        padding: 10px;
+    }
+    
+    .container-skills {
+        flex-direction: column;
+        height: auto;
+    }
+    .container-skills p {
+        width: 100%;
+        
+    }
+
+
+}
+
+@media (max-width: 375px) {
+    .navbar a {
+        padding: 10px;
+    }
+    
+    .container-skills {
+        flex-direction: column;
+        height: auto;
+    }
+    .container-skills p {
+        width: 100%;
+        
+    }
+  
 }
